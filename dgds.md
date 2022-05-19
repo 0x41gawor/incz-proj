@@ -86,6 +86,7 @@ Urządzenie, co określony czas w parametrze `pulse_time` dokonuje pomiaru pulsu
 `pulse norm <min> <max>`
 
 Parametry:
+
 `min` - minimalna wartości pulsu uznawana za normę
 
 `max` - maksymalna wartości pulsu uznawana za normę

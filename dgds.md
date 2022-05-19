@@ -37,7 +37,7 @@ Prototyp urządzenia zawiera trzy kluczowe elementy:
 	- realizacja komunikacji między personelem, a urządzeniem za pomocą SMS
 	- możliwość konfiguracji urządzenia (modyfikacja częstotliwości pomiarów  -> wybór modelu subskrypcyjnego)
 #### Architektura rozwiązania
-![](img/architecure.png)
+![](1.png)
 ### Algorytm działania
 #### Opis słowny
 Urządzenie dokonuje pomiarów pulsu domyślnie co 5 minut. Jeśli puls uznawany jest za mieszczący się w normie, urządzenie na podany numer (należący do osoby z personelu) wysyła co godzinę wartość średnią pulsu z ostatniego okresu pomiarowego. Jeśli wartość pulsu odbiega od normy pomiary wysyłane są do personelu za każdym razem. Dodatkowo personel może zwiększyć ich częstość. Gdy wartość pulsu zostaje uznana za krytyczną, częstość pomiarów wraz wysyłaniem rośnie do 1 min.

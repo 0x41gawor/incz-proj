@@ -52,46 +52,61 @@ Konfiguracja SMS pozwala na:
 - włączenie/wyłączenie subskrypcji na lokalizację urządzenia wraz z interwałem co ile ma być ona przesyłana
 ##### Dodanie numeru telefonu, na który wysyłane są pomiary
 `tel add <xxx xxx xxx>`
+
 Parametry:
 `xxx xxx xxx` - numer telefonu, na który wysyłane mają być pomiary
+
 Działanie:
 Urządzenie przechowuje listę numerów, na które wysyłane są wiadomości SMS po pomiarze. Komenda powoduje dodanie numeru do listy.
 ##### Usunięcie numeru telefonu, na który wysyłane są pomiary
 `tel delete <xxx xxx xxx>`
+
 Parametry:
 `xxx xxx xxx` - numer telefonu, który ma zostać usunięty z listy numerów na które wysyłane są wiadomości SMS po pomiarze.
+
 Działanie:
 Urządzenie przechowuje listę numerów, na które wysyłane są wiadomości SMS po pomiarze. Komenda powoduje usunięcie numeru z listy.
 ##### ustawienie interwału częstości dokonywania pomiarów pulsu
 `pulse interval <pulse_time>`
+
 Parametry:
 `pulse_time` - czas w minutach, co który dokonywane będą pomiary pulsu
+
 Działanie:
 Urządzenie, co określony czas w parametrze `pulse_time` dokonuje pomiaru pulsu. Pomiary są zapisywane, a po minięciu czasu określonego w `pulse_cycle_time`, wysyłane i kasowane z lokalnej pamięci urządzenia.
 ##### Ustawienie czasu okresu pomiarowego pulsu
 `pulse cycle <pulse_cycle_time>`
+
 Parametry:
 `pulse_cycle_time` - czas w minutach stanowiący okres pomiarowy pulsu
+
 Działanie:
 Urządzenie, co określony czas w parametrze `pulse_time` dokonuje pomiaru pulsu. Pomiary są zapisywane, a po minięciu czasu określonego w `pulse_cycle_time`, wysyłane i kasowane z lokalnej pamięci urządzenia.
 ##### Ustawienie zakresu wartości pulsu uznawanego za normę
 `pulse norm <min> <max>`
+
 Parametry:
 `min` - minimalna wartości pulsu uznawana za normę
+
 `max` - maksymalna wartości pulsu uznawana za normę
+
 Działanie: 
 Urządzenie dokonując pomiaru pulsu sprawdza czy jego wartość mieści się w normie. Jeśli tak nie jest `pulse_time` ustawiany jest na jedną minutę, a wiadomości SMS wysyłane są za każdym pomiarem.
 ##### Zażądanie lokalizacji urządzenia
 `loc req`
+
 Działanie:
 Po otrzymaniu wiadomości urządzenie odczytuje lokalizację za pomocą modułu GPS, generuje link do Google Maps //TODO{sprawdzić jak to się robi, czy nie jest to płatne itp. https://stackoverflow.com/questions/1801732/how-do-i-link-to-google-maps-with-a-particular-longitude-and-latitude} i wysyła go w odpowiedzi na wiadomość.
 ##### Włączenie subskrypcji na lokalizację urządzenia 
 `loc on <loc_time>`
+
 Parametry:
 `loc_time` - czas co jaki urządzenie wysyła swoją lokalizacje na numer telefonu, który zażądał subskrypcji.
+
 Działanie:
 Po otrzymaniu wiadomości urządzenie ustawia timer na wartość określoną w `loc_time` i za każdym razem, gdy resetem timer'a, generuje link z lokalizacją do Google Maps i wysyła go na numer, który zażądał subskrypcji.
 #### Wyłączenie subskrypcji na lokalizacje urządzenia
 `loc off`
+
 Działanie:
 Po otrzymaniu wiadomości urządzenie wyłącza timer subskrypcji powiązanej z numerem telefonu, z którego wysłano wiadomość.

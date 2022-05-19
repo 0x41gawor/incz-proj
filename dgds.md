@@ -84,7 +84,7 @@ Urządzenie dokonując pomiaru pulsu sprawdza czy jego wartość mieści się w 
 ##### Zażądanie lokalizacji urządzenia
 `loc req`
 Działanie:
-Po otrzymaniu wiadomości urządzenie odczytuje lokalizację za pomocą modułu GPS, generuje link do Google Maps //TODO{sprawdzić jak to się robi, czy nie jest to płatne itp.} i wysyła go w odpowiedzi na wiadomość.
+Po otrzymaniu wiadomości urządzenie odczytuje lokalizację za pomocą modułu GPS, generuje link do Google Maps //TODO{sprawdzić jak to się robi, czy nie jest to płatne itp. https://stackoverflow.com/questions/1801732/how-do-i-link-to-google-maps-with-a-particular-longitude-and-latitude} i wysyła go w odpowiedzi na wiadomość.
 ##### Włączenie subskrypcji na lokalizację urządzenia 
 `loc on <loc_time>`
 Parametry:
